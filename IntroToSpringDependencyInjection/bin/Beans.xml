@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id="helloWorld" class="com.myorg.beans.HelloWorld">
+       <property name="message" value="Hello World, I'm running Spring!"/>
+   </bean>
+   
+   <bean id="sm" class="com.myorg.beans.SystemMessage" />
+   
+   <bean id="im" class="com.myorg.beans.InjectableMessage">
+   	<constructor-arg value="This message was injected using the constructor." />
+   </bean>
+   
+   <bean id="aie" class="com.myorg.beans.AnotherInjectionExample">
+   	<property name="message" value="This message was injected by setter." />
+   </bean>
+   
+   <bean id="defaultSystemMessage" class="java.lang.String">
+   	<constructor-arg value="Default Message: Up and Running" />
+   </bean>
+   
+   <bean id="yaie" class="com.myorg.beans.YetAnotherInjectionExample">
+   	<property name="message" ref="defaultSystemMessage" />
+   </bean>
+</beans>

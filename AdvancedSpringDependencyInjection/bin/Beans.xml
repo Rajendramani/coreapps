@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <bean id="jas" class="com.myorg.helpers.JSONAutoSearcher">
+    	<constructor-arg value="G:\DevArena\EclipseLuna\MoreSpringIOC\src\CarsOnTheLot.json"></constructor-arg>
+    	
+    </bean>
+    
+    <bean id="pdt" class="com.myorg.helpers.PipeDelimitedTextAutoSearcher">
+    	<constructor-arg value="G:\DevArena\EclipseLuna\MoreSpringIOC\src\CarsOnTheLot.txt"></constructor-arg>
+    </bean>
+    
+    <bean id="af1" class="com.myorg.helpers.AutoFinder">
+    	<constructor-arg ref="jas"></constructor-arg>
+    	<property name="make" value="Ford"/>
+    </bean>
+    
+    <bean id="af2" class="com.myorg.helpers.AutoFinder">
+    	<constructor-arg ref="pdt"></constructor-arg>
+    	<property name="make" value="Chevy"/>
+    	<!--<property name="make" value="all"/>-->
+    </bean>
+    
+</beans>

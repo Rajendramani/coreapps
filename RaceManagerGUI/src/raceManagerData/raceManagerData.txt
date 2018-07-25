@@ -1,0 +1,4 @@
+BIKER|name=Tom;age=32;id=47867;injured=false;clips=true
+RUNNER|name=Mary;age=43;id=47868;injured=false;shoes=Asics
+SWIMMER|name=Mike;age=40;id=47869;injured=false
+RUNNER|name=Amy;age=23;id=47870;injured=false;shoes=Saucony

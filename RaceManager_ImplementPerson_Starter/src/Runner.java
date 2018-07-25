@@ -1,0 +1,66 @@
+/**
+ * A runner.
+ * 
+ * @author  Brian
+ * @version 1.0
+ */
+public class Runner implements RaceParticipant
+{
+    private int _racerId;
+    
+    /**
+     * Create a new runner.
+     */
+    public Runner()
+    {
+        //do nothing.
+    }
+    
+    /**
+     * Create a new runner with properties set.
+     * @param name String name for the Runner
+     */
+    public Runner(int racerId)
+    {
+        _racerId = racerId;
+    }
+    
+    /**
+     * Get the RacerID of the Runner.
+     * @return int representing Runner's racerId
+     */
+    public int getRacerId()
+    {
+        return _racerId;
+    }
+    
+    /**
+     * Set the racer id for the runner.
+     * @param int to set as Runner's RacerId
+     */
+    public void setRacerId(int value)
+    {
+        _racerId = value;
+    }
+    
+    /**
+     * The race Activity for the Runner.
+     * @return String representing the Runner's race activity.
+     */
+    public String performRaceActivity()
+    {
+        return "Running...";
+    }
+    
+    /**
+     * Get the state of the Runner as a String.
+     * @return String containing state of the Runner.
+     */
+    public String toString()
+    {
+        return String.format("%s]\tRacerID: %d\tActivity: %s\n"
+                                , getClass()
+                                , getRacerId()
+                                , performRaceActivity());
+    }
+}

@@ -1,0 +1,25 @@
+// add this to the BinarySearchTree.java file
+
+public void inOrder() {
+      inOrder(root);
+   }
+
+   private void inOrder(Node n) {
+      if (n != null) {
+         inOrder(n.left);
+         System.out.println(n.getData());
+         inOrder(n.right);
+      }
+   }
+
+   public void preOrder() {
+      preOrder(root);
+   }
+
+   private void preOrder(Node n) {
+      if (n != null) {
+         System.out.println(n.getData());
+         preOrder(n.left);
+         preOrder(n.right);
+      }
+   }

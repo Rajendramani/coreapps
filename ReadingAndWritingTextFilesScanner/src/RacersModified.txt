@@ -1,0 +1,10 @@
+Mary|53
+Tom|33
+Steve|79
+Paul|61
+Jason|84
+Roger|67
+Amy|77
+Sally|73
+Wes|84
+John|19

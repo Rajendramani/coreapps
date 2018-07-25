@@ -1,0 +1,9 @@
+{
+	"racemanagerdb" : 
+		{
+			"server" : ""
+			, "database" : ""
+			, "username" : ""
+			, "password" : ""
+		}
+}
